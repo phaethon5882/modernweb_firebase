@@ -1,19 +1,34 @@
 <template>
   <div>
-    <v-alert :type="type[i%(type.length-1)]" :value="true" v-for="i in 10" :key="i">abcde{{i}}</v-alert>
-    <v-btn class="ma-2" outlined large fab color="indigo">
-      <v-icon>mdi-circle-edit-outline</v-icon>
-    </v-btn>
+    <parallaxImg />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsum molestiae, ipsa officia eveniet atque dolorem ratione placeat deserunt modi deleniti accusantium repellendus est, nostrum cum sunt maxime? Assumenda, iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eaque ipsum eos! Labore delectus voluptatibus, quidem soluta velit quis nulla cum sit, animi sed quisquam. Aliquid deleniti numquam reprehenderit impedit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsum molestiae, ipsa officia eveniet atque dolorem ratione placeat deserunt modi deleniti accusantium repellendus est, nostrum cum sunt maxime? Assumenda, iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eaque ipsum eos! Labore delectus voluptatibus, quidem soluta velit quis nulla cum sit, animi sed quisquam. Aliquid deleniti numquam reprehenderit impedit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsum molestiae, ipsa officia eveniet atque dolorem ratione placeat deserunt modi deleniti accusantium repellendus est, nostrum cum sunt maxime? Assumenda, iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eaque ipsum eos! Labore delectus voluptatibus, quidem soluta velit quis nulla cum sit, animi sed quisquam. Aliquid deleniti numquam reprehenderit impedit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsum molestiae, ipsa officia eveniet atque dolorem ratione placeat deserunt modi deleniti accusantium repellendus est, nostrum cum sunt maxime? Assumenda, iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eaque ipsum eos! Labore delectus voluptatibus, quidem soluta velit quis nulla cum sit, animi sed quisquam. Aliquid deleniti numquam reprehenderit impedit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsum molestiae, ipsa officia eveniet atque dolorem ratione placeat deserunt modi deleniti accusantium repellendus est, nostrum cum sunt maxime? Assumenda, iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eaque ipsum eos! Labore delectus voluptatibus, quidem soluta velit quis nulla cum sit, animi sed quisquam. Aliquid deleniti numquam reprehenderit impedit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsum molestiae, ipsa officia eveniet atque dolorem ratione placeat deserunt modi deleniti accusantium repellendus est, nostrum cum sunt maxime? Assumenda, iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eaque ipsum eos! Labore delectus voluptatibus, quidem soluta velit quis nulla cum sit, animi sed quisquam. Aliquid deleniti numquam reprehenderit impedit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsum molestiae, ipsa officia eveniet atque dolorem ratione placeat deserunt modi deleniti accusantium repellendus est, nostrum cum sunt maxime? Assumenda, iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eaque ipsum eos! Labore delectus voluptatibus, quidem soluta velit quis nulla cum sit, animi sed quisquam. Aliquid deleniti numquam reprehenderit impedit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsum molestiae, ipsa officia eveniet atque dolorem ratione placeat deserunt modi deleniti accusantium repellendus est, nostrum cum sunt maxime? Assumenda, iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eaque ipsum eos! Labore delectus voluptatibus, quidem soluta velit quis nulla cum sit, animi sed quisquam. Aliquid deleniti numquam reprehenderit impedit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsum molestiae, ipsa officia eveniet atque dolorem ratione placeat deserunt modi deleniti accusantium repellendus est, nostrum cum sunt maxime? Assumenda, iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eaque ipsum eos! Labore delectus voluptatibus, quidem soluta velit quis nulla cum sit, animi sed quisquam. Aliquid deleniti numquam reprehenderit impedit.</p>
   </div>
 </template>
 
 <script>
 export default {
   name: "home",
+  components: {
+    parallaxImg: () => import("../components/ParallaxImage.vue")
+  },
   data () {
     return {
       type: ["success", "error", "warning", "info"]
     }
+  },
+  mounted () {
+
+  },
+  methods: {
+
   }
 }
 </script>
