@@ -14,14 +14,13 @@
         </v-tooltip>
         <div class="subheading mb-3 text-xs-center animated fast text-shadow">Team No.9</div>
         <div class="white--text my-2 display-1 text-xs-center animated zoomInUp fast text-shadow">
-          <h1>
-            Hi, I'm
-            <br v-if="screenWidth <= 375" />오구오구
-            <br v-if="screenWidth <= 375" />Assistent!
-          </h1>
+          <div class="greeting">Hi, I'm</div>
+          <div class="greeting">오구오구</div>
+          <div class="greeting">Assistent!</div>
         </div>
       </v-layout>
     </v-parallax>
+    <br />
   </section>
 </template>
 
@@ -29,7 +28,6 @@
 export default {
   name: "parallaxImg",
   computed: {
-    screenWidth: this.getWidth()
   },
   data () {
     return {
@@ -37,9 +35,6 @@ export default {
     }
   },
   methods: {
-    getWidth () {
-      return window.innerWidth
-    }
   }
 }
 </script>
@@ -47,5 +42,22 @@ export default {
 <style>
 .text-shadow {
   text-shadow: 3px 3px 0px #1565c0, 4px 4px 0px #42a5f5;
+}
+/* 반응형-배너인사 메시지 */
+.greeting {
+  width: auto;
+  font-size: 6vh;
+  margin: 10px 10px 20px 20px;
+  text-align: center;
+}
+@media (max-width: 375px) {
+  .greeting {
+    display: block;
+  }
+}
+@media (min-width: 376px) {
+  .greeting {
+    display: inline-block;
+  }
 }
 </style>

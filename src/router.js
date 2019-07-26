@@ -1,6 +1,6 @@
 import Vue from "vue"
 import Router from "vue-router"
-import Home from "./views/Home.vue"
+import Home from "./views/HomePage.vue"
 
 Vue.use(Router)
 
@@ -22,6 +22,11 @@ export default new Router({
       path: "/about2",
       name: "about2",
       component: () => import("./views/About2.vue")
+    },
+    {
+      path: "/gitgraph",
+      name: "gitgraph",
+      component: () => import("./views/GitGraphPage.vue")
     },
     {
       path: "/*",
