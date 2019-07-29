@@ -11,17 +11,30 @@
       :hide-delimiters="true"
       :show-arrows="false"
     >
-      <v-carousel-item v-for="(item, i) in items" :key="i">
-        <v-card class="mx-auto" max-width="300">
-          <v-img class="white--text" height="400px" :src="getImg(item.imgPath)">
-            <v-card-title class="align-end justify-center fill-height text-shadow display-2">
+      <v-carousel-item
+        v-for="(item, i) in items"
+        :key="i"
+      >
+        <v-card
+          class="mx-auto"
+          max-width="300"
+        >
+          <v-img
+            class="white--text"
+            height="400px"
+            :src="getImg(item.imgPath)"
+          >
+            <v-card-title class="align-end justify-center fill-height carousel-text-shadow display-2">
               <span>{{item.name}}</span>
             </v-card-title>
           </v-img>
 
           <v-card-text>
             <h2>{{item.position}}</h2>
-            <p v-html="item.desc" class="desc"></p>
+            <p
+              v-html="item.desc"
+              class="desc"
+            ></p>
           </v-card-text>
         </v-card>
       </v-carousel-item>
@@ -75,7 +88,7 @@ export default {
   text-align: center;
   margin: 10vh 0 5vh 0;
 }
-.text-shadow {
+.carousel-text-shadow {
   text-shadow: 3px 3px 0px #535353, 4px 4px 4px #f54242;
 }
 .desc {

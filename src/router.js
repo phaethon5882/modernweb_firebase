@@ -14,24 +14,19 @@ export default new Router({
       component: Home
     },
     {
-      path: "/about",
-      name: "about",
-      component: () => import(/* webpackChunkName: "about" */ "./views/About.vue")
+      path: "/gitflow",
+      name: "gitflow",
+      component: () => import("./views/GitFlowPage.vue")
     },
     {
-      path: "/about2",
-      name: "about2",
-      component: () => import("./views/About2.vue")
-    },
-    {
-      path: "/gitgraph",
-      name: "gitgraph",
-      component: () => import("./views/GitGraphPage.vue")
+      path: "/vuex",
+      name: "vuexTest",
+      component: () => import("./views/VuexTestPage.vue")
     },
     {
       path: "/*",
-      name: "404",
-      component: () => import("./views/e404.vue")
+      name: "error404",
+      component: () => import("./views/Error404Page.vue")
     }
   ]
 })

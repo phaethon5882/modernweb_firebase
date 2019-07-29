@@ -2,9 +2,9 @@
 (function () {
   var gtConstEvalStartTime = new Date()
   function d(b) {
-    var a = document.getElementsByTagName("head")[0]
+    var a = document.getElementsByTagName("footer")[0]
     a ||
-      (a = document.body.parentNode.appendChild(document.createElement("head")))
+      (a = document.body.parentNode.appendChild(document.createElement("footer")))
     a.appendChild(b)
   }
   function _loadJs(b) {
@@ -50,7 +50,6 @@
   if (_isNS("google.translate.Element")) {
     return
   }
-  console.log("여기는 오는 것 같아");
 
   (function () {
     var c = _setupNS("google.translate._const")
@@ -79,6 +78,6 @@
     c._ps = b + "/translate_static/css/translateelement.css"
     c._puh = "translate.google.com"
     _loadCss(c._ps)
-    _loadJs(b + "/translate_static/js/element/main_ko.js")
+    _loadJs("./ko_main.js")
   })()
 })()

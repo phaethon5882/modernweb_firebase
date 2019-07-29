@@ -6,20 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-  <title>modernweb</title>
+  <title>오구오구 어시스턴트</title>
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="animate.css">
   <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet" />
-  <!--google translation-->
-  <script src="./translate.js"></script>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({ pageLanguage: "kr" }, "google_translate_element")
-    }
-  </script>
   <!--Weather CSS-->
   <link rel="stylesheet" href="./vue-weather-widget.css">
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'kr' }, 'google_translate_element');
+    }
+  </script>
 </head>
 
 <body>
@@ -34,6 +36,30 @@
 <style>
   * {
     font-family: "Do Hyeon", sans-serif;
+  }
+
+  #google_translate_element>div>span {
+    display: none;
+  }
+
+  #google_translate_element>div {
+    font-size: 0px;
+  }
+
+  .skiptranslate>iframe {
+    display: none;
+  }
+
+  #google_translate_element {
+    display: inline-block;
+  }
+
+  #google_translate_element select {
+    transform: translateY(10px);
+  }
+
+  #google_translate_element {
+    padding-left: 15px;
   }
 </style>
 
