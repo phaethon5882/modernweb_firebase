@@ -1,29 +1,45 @@
-# modernweb
+## 오구오구 Assistent Release
 
-## Project setup
-```
-yarn install
-```
+소규모 개발팀의 업무와 커뮤니케이션을 도와주기 위한 목적으로 제작 된 사이트입니다. 
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+저는 주로 1번과 4번을 담당하였습니다.
 
-### Compiles and minifies for production
-```
-yarn run build
-```
 
-### Run your tests
-```
-yarn run test
-```
 
-### Lints and fixes files
-```
-yarn run lint
-```
+1. **깃 플로우 차트 시각화**
+2. 게시판 
+3. Q&A 챗봇
+4. 관리자 도구: **사이트 분석도구**(방문자 수, 접속자 수, 게시글 수), 회원관리
+5. 개인 포트폴리오 기능: 개발자 소개  페이지
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### 사용된 기술
+
+- 백엔드: **FireBase**(BaaS)
+- 프론트엔드 프레임워크 : **Vue** CLI 3.0, **Vuetify** 2.0
+- 프론트엔드 서버:  **NodeJS**
+- 구글애널리틱스 인증 **토큰 발급서버**: Flask on AWS **Docker**
+
+
+
+### 프로젝트 상세 기술
+
+- **Firebase** 를 사용한 Serverless 방식의 백엔드
+  - 주로 게시글과 사용자 정보를 주고 받는 용
+- **Docker**와 AWS를 사용한 백엔드
+  - 구글 애널리틱스 임베드에 사용되는 **인증 토큰을 자동으로 발급**함
+- **PWA(** Progressive Web App )
+  - Service Worker 를 사용하여 **오프라인** 상태에서도 캐싱된 데이터로 사이트 이용 가능
+  - 게시글이 등록될 때마다 알림을 허용한 장치들에 한하여 **푸시 알림** 전송
+- **반응형** 하이브리드 웹 앱
+  - 프론트 프레임웍인 **Vuetify** 를 사용하여 모바일과 데스크탑에 맞는 CSS 제공
+- 관리자를 위한 **대시 보드** 제공
+  - **네비게이션 가드**를 사용하여 허가된 사용자만 접근 가능
+  - 회원 정보와 구글 애널리틱스를 사용한 **사이트 분석도구**를 제공
+- GitLab API를 활용한 **깃 플로우 차트** 제공
+  - 오픈소스인 **gitgraph.js** 기반으로 깃 플로우 차트를 예쁘게 표시해줌
+- 게시판 기능
+  - 개발자간의 소통을 위해 마크다운 에디터를 적용한 게시판 제공
+- Q&A 챗봇
+  - **챗봇 단비**를 사용하여 사이트 안내 서비스 제공
