@@ -13,6 +13,9 @@
 5. 개인 포트폴리오 기능: 개발자 소개  페이지
 
 
+### 시연영상
+https://www.youtube.com/watch?v=UXa3h6vDMPs
+
 
 ### 사용된 기술
 
